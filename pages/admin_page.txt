@@ -1,0 +1,29 @@
+***Settings***
+Resource  ../libs.txt
+***Variables***
+${ap_btn_new_customer}  xpath=//button[contains(@href,'#/new-customer')]
+${ap_link_new_customer}  xpath=//a[contains(@href,'Beuntzer Management')]
+${ap_link_customer_index}  xpath=.//*[@id='id_3']/a
+${btn_new_user}  xpath=//button[contains(@href,'new-user')]
+${btn_user_menu}  xpath=//span[contains(@class,'caret')]
+${btn_logout}  xpath=//a[contains(@class,'ng-binding')]
+${btn_my_acc}  xpath=//a[contains(@href,'my-account')]
+${btn_ad_menu}  xpath=//span[contains(@class,'caret')]
+
+***Keywords***
+Click Create New Customer on Administration Page
+  Click Element  ${ap_btn_new_customer}
+Click Go To Customer Index on Administration Page
+  Click Element  ${ap_link_new_customer}
+Wait For Kunde on Administration Page
+  Wait Until Element Is Visible  ${ap_btn_new_customer}
+Wait For Customer Index on Administration Page
+  Wait Until Element Is Visible  ${ap_link_customer_index}
+Go to Customer Index Page on Administration Page
+  Click Element  ${ap_link_customer_index}
+Create New User On Admin Page
+  Click Element  ${btn_new_user} 
+Click Dropdown On Admin Page
+  Click Element  ${btn_ad_menu}
+Select My Account Button On Admin Page
+  Click Element  ${btn_my_acc}  

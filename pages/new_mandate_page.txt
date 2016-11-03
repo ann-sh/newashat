@@ -1,0 +1,63 @@
+***Settings***
+
+Resource  ../libs.txt
+
+***Variables***
+
+${nmp_inpt_name}  xpath=.//*[@id='mdetails_name']
+${nmp_inpt_responsible_person}  xpath=.//*[@id='mdetails_name_responsible']
+${nmp_inpt_adress}  xpath=.//*[@id='mdetails_address']
+${nmp_inpt_email}  xpath=.//*[@id='mdetails_email']
+${nmp_inpt_mandate_manager}  xpath=//select[@name="lead_mandate_id"]
+${nmp_inpt_kunde_number}  xpath=.//*[@id='mdetails_kundenummer']
+${nmp_inpt_lawyers}  xpath=.//*[@id='mdetails_legal_entity']
+${nmp_inpt_phone}  xpath=.//*[@id='mdetails_phone']
+${nmp_inpt_closing_date}  xpath=//input[@name="end_date_of_fiscal_year"]
+${nmp_inpt_deputy_manager}  xpath=//select[@name="lead_mandate_deputy_id"]
+${nmp_btn_ok}  xpath=//button[@ng-click="ok()"]
+${nmp_btn_cancel}  xpath=//button[@ng-click="cancel()"]
+***Keywords***
+Input Name On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_name}  ${text}
+  
+Input Responsible Person On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_responsible_person}  ${text}
+
+Input Adress On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_adress}  ${text}
+  
+Input Email On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_email}  ${text}
+  
+Select Mandate Manager On New Mandate Page
+  [Documentation]  Selects Nicola, AU User
+  [Arguments]  ${title}
+  Select From List By Label  ${nmp_inpt_mandate_manager}  ${title}
+  
+Input Kunde Number On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_kunde_number}  ${text}
+  
+Input Lefal Entity On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_lawyers}  ${text}
+  
+Input Phone On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_phone}  ${text}
+  
+Input Closing Date On New Mandate Page
+  [Arguments]  ${text}
+  Input Text  ${nmp_inpt_closing_date}  ${text}
+  
+Select Deputy Manager On New Mandate Page
+  [Documentation]  Selects Mr, Mrs
+  [Arguments]  ${title}
+  Select From List By Label  ${nmp_inpt_deputy_manager}  ${title}
+  
+Click OK On New Mandate Page
+  Click Element  ${nmp_btn_ok}

@@ -1,0 +1,9 @@
+***Settings***
+Resource  ../libs.txt
+***Variables***
+${cip_inpt_filter}  //input[contains(@ng-model, 'customersTableUpgrade.filter.name')]
+***Keywords***
+Input Customer on Customer Index Page
+  [Arguments]  ${text}
+  Input Text  ${cip_inpt_filter}  ${text}
+

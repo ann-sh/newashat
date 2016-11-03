@@ -1,0 +1,35 @@
+***Settings***
+Resource  ../libs.txt
+***Variables***
+${ccp_input_name}  id=mdetails_name
+${ccp_input_address}  id=cdetails_address
+${ccp_input_city}  id=cdetails_city 
+${ccp_input_phone}  id=cdetails_phone 
+${ccp_input_zip}  cdetails_plz
+${ccp_input_entity}  id=cdetails_legal_entity
+${ccp_input_email}  id=cdetails_email
+${ccp_btn_save}  xpath=//button[contains(@testid, 'btn_save')]
+***Keywords***
+Input Name on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_name}  ${text}
+Input Address on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_address}  ${text}
+Input City on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_city}  ${text}
+Input Phone on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_phone}  ${text}
+Input Zip on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_zip}  ${text}
+Input Entity on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_entity}  ${text}
+Input Email on Customer Creation Page
+  [Arguments]  ${text}
+  Input Text  ${ccp_input_email}  ${text}
+Save Customer on Customer Creation Page
+  Click Element  ${ccp_btn_save}

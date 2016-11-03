@@ -1,0 +1,27 @@
+***Settings***
+Resource  ../libs.txt
+***Variables***
+${lp_inpt_username}  xpath=//input[@testid="username_input"]
+${lp_inpt_password}  xpath=//input[@testid="password_input"]
+${lp_btn_login}  xpath=//button[@testid="btn_login"]
+
+***Keywords***
+Input Username On Login Page
+  [Arguments]  ${text}
+  Input Text  ${lp_inpt_username}  ${text}
+
+Input AU Password On Login Page
+  [Arguments]  ${text}
+  Input Text  ${lp_inpt_password}  ${ADMIN_PASSWORD} 
+
+Input AD Password On Login Page
+  [Arguments]  ${text}
+  Input Text  ${lp_inpt_password}  ${adADMIN_PASSWORD}
+
+Input Password On Login Page
+  [Arguments]  ${text}
+  Input Text  ${lp_inpt_password}  ${text}
+
+Click Log in On Login Page
+  Click Element  ${lp_btn_login}
+

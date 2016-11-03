@@ -1,0 +1,171 @@
+==============================================================================
+20161103 14:04:05.407 - INFO - + START SUITE: Login [ ]
+==============================================================================
+20161103 14:04:05.408 - INFO - +- START TEST: Sucessful Customer Creation [ ]
+------------------------------------------------------------------------------
+20161103 14:04:05.408 - INFO - +-- START SETUP: Preconditions [ ]
+20161103 14:04:05.409 - INFO - +--- START KW: ui_keywords.Open Browser for AuditTool [ ${HOME_URL} | ${BROWSER} ]
+20161103 14:04:05.410 - INFO - +---- START KW: Selenium2Library.Open Browser [ ${url} | ${browser} ]
+20161103 14:04:05.410 - INFO - Opening browser 'gc' to base url 'http://audit-tool.scaletools.com.ua'
+20161103 14:04:11.242 - DEBUG - Opened browser with session id a140e8ae9e43b99ac2a98df44f3ed0b5
+20161103 14:04:11.243 - INFO - +---- END KW: Selenium2Library.Open Browser (5833)
+20161103 14:04:11.243 - INFO - +---- START KW: Selenium2Library.Maximize Browser Window [ ]
+20161103 14:04:11.555 - INFO - +---- END KW: Selenium2Library.Maximize Browser Window (312)
+20161103 14:04:11.555 - INFO - +---- START KW: Selenium2Library.Set Selenium Speed [ .2 ]
+20161103 14:04:11.555 - INFO - +---- END KW: Selenium2Library.Set Selenium Speed (0)
+20161103 14:04:11.556 - INFO - +--- END KW: ui_keywords.Open Browser for AuditTool (6147)
+20161103 14:04:11.556 - INFO - +-- END SETUP: Preconditions (6148)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:11.556 - INFO - +-- START KW: ${NUMBER} = BuiltIn.Evaluate [ random.randint(1,10000) | random ]
+20161103 14:04:11.557 - INFO - ${NUMBER} = 2522
+20161103 14:04:11.557 - INFO - +-- END KW: ${NUMBER} = BuiltIn.Evaluate (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:11.557 - INFO - +-- START KW: BuiltIn.Set Suite Variable [ ${NUMBER} ]
+20161103 14:04:11.557 - INFO - ${NUMBER} = 2522
+20161103 14:04:11.557 - INFO - +-- END KW: BuiltIn.Set Suite Variable (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:11.558 - INFO - +-- START KW: login_page.Input Email on Login Page [ au_admin ]
+20161103 14:04:11.558 - INFO - +--- START KW: Selenium2Library.Input Text [ ${lp_inpt_email} | ${text} ]
+20161103 14:04:11.558 - INFO - Typing text 'au_admin' into text field 'xpath=//input[contains(@testid, 'username_input')]'
+20161103 14:04:12.301 - INFO - +--- END KW: Selenium2Library.Input Text (742)
+20161103 14:04:12.301 - INFO - +-- END KW: login_page.Input Email on Login Page (743)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:12.302 - INFO - +-- START KW: login_page.Input Pwd on Login Page [ auadminpassword ]
+20161103 14:04:12.303 - INFO - +--- START KW: Selenium2Library.Input Text [ ${lp_inpt_pwd} | ${text} ]
+20161103 14:04:12.303 - INFO - Typing text 'auadminpassword' into text field 'xpath=//input[contains(@testid, 'password_input')]'
+20161103 14:04:13.055 - INFO - +--- END KW: Selenium2Library.Input Text (752)
+20161103 14:04:13.056 - INFO - +-- END KW: login_page.Input Pwd on Login Page (754)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:13.056 - INFO - +-- START KW: login_page.Click Login on Login Page [ ]
+20161103 14:04:13.057 - INFO - +--- START KW: Selenium2Library.Click Element [ ${lp_btn_signup} ]
+20161103 14:04:13.057 - INFO - Clicking element 'xpath=//button[contains(@testid, 'btn_login')]'.
+20161103 14:04:13.540 - INFO - +--- END KW: Selenium2Library.Click Element (483)
+20161103 14:04:13.540 - INFO - +-- END KW: login_page.Click Login on Login Page (484)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:13.541 - INFO - +-- START KW: au_admin_page.Wait For Kunde on Administration Page [ ]
+20161103 14:04:13.542 - INFO - +--- START KW: Selenium2Library.Wait Until Element Is Visible [ ${ap_btn_new_customer} ]
+20161103 14:04:14.765 - INFO - +--- END KW: Selenium2Library.Wait Until Element Is Visible (1224)
+20161103 14:04:14.765 - INFO - +-- END KW: au_admin_page.Wait For Kunde on Administration Page (1225)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:14.766 - INFO - +-- START KW: au_admin_page.Click Create New Customer on Administration Page [ ]
+20161103 14:04:14.767 - INFO - +--- START KW: Selenium2Library.Click Element [ ${ap_btn_new_customer} ]
+20161103 14:04:14.767 - INFO - Clicking element 'xpath=//button[contains(@href,'#/new-customer')]'.
+20161103 14:04:15.217 - INFO - +--- END KW: Selenium2Library.Click Element (450)
+20161103 14:04:15.218 - INFO - +-- END KW: au_admin_page.Click Create New Customer on Administration Page (452)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:15.218 - INFO - +-- START KW: customer_creation_page.Input Name on Customer Creation Page [ ASh_Test_Customer+${NUMBER} ]
+20161103 14:04:15.220 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_name} | ${text} ]
+20161103 14:04:15.220 - INFO - Typing text 'ASh_Test_Customer+2522' into text field 'id=mdetails_name'
+20161103 14:04:16.151 - INFO - +--- END KW: Selenium2Library.Input Text (931)
+20161103 14:04:16.152 - INFO - +-- END KW: customer_creation_page.Input Name on Customer Creation Page (933)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:16.152 - INFO - +-- START KW: customer_creation_page.Input Address on Customer Creation Page [ Betburweg ${NUMBER} ]
+20161103 14:04:16.153 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_address} | ${text} ]
+20161103 14:04:16.154 - INFO - Typing text 'Betburweg 2522' into text field 'id=cdetails_address'
+20161103 14:04:16.915 - INFO - +--- END KW: Selenium2Library.Input Text (762)
+20161103 14:04:16.915 - INFO - +-- END KW: customer_creation_page.Input Address on Customer Creation Page (763)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:16.916 - INFO - +-- START KW: customer_creation_page.Input City on Customer Creation Page [ Loëx ]
+20161103 14:04:16.917 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_city} | ${text} ]
+20161103 14:04:16.917 - INFO - Typing text 'Loëx' into text field 'id=cdetails_city'
+20161103 14:04:17.626 - INFO - +--- END KW: Selenium2Library.Input Text (708)
+20161103 14:04:17.626 - INFO - +-- END KW: customer_creation_page.Input City on Customer Creation Page (710)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:17.627 - INFO - +-- START KW: customer_creation_page.Input Phone on Customer Creation Page [ 022 337 78 39 ]
+20161103 14:04:17.628 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_phone} | ${text} ]
+20161103 14:04:17.628 - INFO - Typing text '022 337 78 39' into text field 'id=cdetails_phone'
+20161103 14:04:18.383 - INFO - +--- END KW: Selenium2Library.Input Text (754)
+20161103 14:04:18.383 - INFO - +-- END KW: customer_creation_page.Input Phone on Customer Creation Page (757)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:18.385 - INFO - +-- START KW: customer_creation_page.Input Zip on Customer Creation Page [ 123 ${NUMBER} ]
+20161103 14:04:18.386 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_zip} | ${text} ]
+20161103 14:04:18.386 - INFO - Typing text '123 2522' into text field 'cdetails_plz'
+20161103 14:04:19.116 - INFO - +--- END KW: Selenium2Library.Input Text (729)
+20161103 14:04:19.116 - INFO - +-- END KW: customer_creation_page.Input Zip on Customer Creation Page (732)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:19.117 - INFO - +-- START KW: customer_creation_page.Input Entity on Customer Creation Page [ ASh Test Customer+${NUMBER} AG ]
+20161103 14:04:19.118 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_entity} | ${text} ]
+20161103 14:04:19.118 - INFO - Typing text 'ASh Test Customer+2522 AG' into text field 'id=cdetails_legal_entity'
+20161103 14:04:19.942 - INFO - +--- END KW: Selenium2Library.Input Text (824)
+20161103 14:04:19.942 - INFO - +-- END KW: customer_creation_page.Input Entity on Customer Creation Page (825)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:19.943 - INFO - +-- START KW: customer_creation_page.Input Email on Customer Creation Page [ testemail+${NUMBER}@gmail.com ]
+20161103 14:04:19.944 - INFO - +--- START KW: Selenium2Library.Input Text [ ${ccp_input_email} | ${text} ]
+20161103 14:04:19.944 - INFO - Typing text 'testemail+2522@gmail.com' into text field 'id=cdetails_email'
+20161103 14:04:20.771 - INFO - +--- END KW: Selenium2Library.Input Text (827)
+20161103 14:04:20.772 - INFO - +-- END KW: customer_creation_page.Input Email on Customer Creation Page (829)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:20.772 - INFO - +-- START KW: customer_creation_page.Save Customer on Customer Creation Page [ ]
+20161103 14:04:20.773 - INFO - +--- START KW: Selenium2Library.Click Element [ ${ccp_btn_save} ]
+20161103 14:04:20.774 - INFO - Clicking element 'xpath=//button[contains(@testid, 'btn_save')]'.
+20161103 14:04:21.243 - INFO - +--- END KW: Selenium2Library.Click Element (470)
+20161103 14:04:21.243 - INFO - +-- END KW: customer_creation_page.Save Customer on Customer Creation Page (471)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:21.244 - INFO - +-- START TEARDOWN: Selenium2Library.Close All Browsers [ ]
+20161103 14:04:21.244 - DEBUG - Closing all browsers
+20161103 14:04:21.512 - INFO - +-- END TEARDOWN: Selenium2Library.Close All Browsers (268)
+------------------------------------------------------------------------------
+20161103 14:04:21.512 - INFO - +- END TEST: Sucessful Customer Creation (16105)
+------------------------------------------------------------------------------
+20161103 14:04:21.513 - INFO - +- START TEST: Verify Customer Creation [ ]
+------------------------------------------------------------------------------
+20161103 14:04:21.513 - INFO - +-- START SETUP: Preconditions [ ]
+20161103 14:04:21.514 - INFO - +--- START KW: ui_keywords.Open Browser for AuditTool [ ${HOME_URL} | ${BROWSER} ]
+20161103 14:04:21.515 - INFO - +---- START KW: Selenium2Library.Open Browser [ ${url} | ${browser} ]
+20161103 14:04:21.515 - INFO - Opening browser 'gc' to base url 'http://audit-tool.scaletools.com.ua'
+20161103 14:04:27.449 - DEBUG - Opened browser with session id bd3202b7acf148e62ca5bea3b975c334
+20161103 14:04:27.449 - INFO - +---- END KW: Selenium2Library.Open Browser (5934)
+20161103 14:04:27.450 - INFO - +---- START KW: Selenium2Library.Maximize Browser Window [ ]
+20161103 14:04:27.941 - INFO - +---- END KW: Selenium2Library.Maximize Browser Window (491)
+20161103 14:04:27.942 - INFO - +---- START KW: Selenium2Library.Set Selenium Speed [ .2 ]
+20161103 14:04:27.942 - INFO - +---- END KW: Selenium2Library.Set Selenium Speed (0)
+20161103 14:04:27.943 - INFO - +--- END KW: ui_keywords.Open Browser for AuditTool (6429)
+20161103 14:04:27.943 - INFO - +-- END SETUP: Preconditions (6430)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:27.944 - INFO - +-- START KW: login_page.Input Email on Login Page [ au_admin ]
+20161103 14:04:27.945 - INFO - +--- START KW: Selenium2Library.Input Text [ ${lp_inpt_email} | ${text} ]
+20161103 14:04:27.946 - INFO - Typing text 'au_admin' into text field 'xpath=//input[contains(@testid, 'username_input')]'
+20161103 14:04:28.705 - INFO - +--- END KW: Selenium2Library.Input Text (760)
+20161103 14:04:28.706 - INFO - +-- END KW: login_page.Input Email on Login Page (762)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:28.706 - INFO - +-- START KW: login_page.Input Pwd on Login Page [ auadminpassword ]
+20161103 14:04:28.708 - INFO - +--- START KW: Selenium2Library.Input Text [ ${lp_inpt_pwd} | ${text} ]
+20161103 14:04:28.708 - INFO - Typing text 'auadminpassword' into text field 'xpath=//input[contains(@testid, 'password_input')]'
+20161103 14:04:29.473 - INFO - +--- END KW: Selenium2Library.Input Text (766)
+20161103 14:04:29.473 - INFO - +-- END KW: login_page.Input Pwd on Login Page (767)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:29.474 - INFO - +-- START KW: login_page.Click Login on Login Page [ ]
+20161103 14:04:29.476 - INFO - +--- START KW: Selenium2Library.Click Element [ ${lp_btn_signup} ]
+20161103 14:04:29.476 - INFO - Clicking element 'xpath=//button[contains(@testid, 'btn_login')]'.
+20161103 14:04:29.957 - INFO - +--- END KW: Selenium2Library.Click Element (482)
+20161103 14:04:29.958 - INFO - +-- END KW: login_page.Click Login on Login Page (484)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:29.958 - INFO - +-- START KW: au_admin_page.Wait For Customer Index on Administration Page [ ]
+20161103 14:04:29.959 - INFO - +--- START KW: Selenium2Library.Wait Until Element Is Visible [ ${ap_link_customer_index} ]
+20161103 14:04:31.172 - INFO - +--- END KW: Selenium2Library.Wait Until Element Is Visible (1213)
+20161103 14:04:31.172 - INFO - +-- END KW: au_admin_page.Wait For Customer Index on Administration Page (1214)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:31.173 - INFO - +-- START KW: au_admin_page.Go to Customer Index Page on Administration Page [ ]
+20161103 14:04:31.174 - INFO - +--- START KW: Selenium2Library.Click Element [ ${ap_link_customer_index} ]
+20161103 14:04:31.174 - INFO - Clicking element 'xpath=.//*[@id='id_3']/a'.
+20161103 14:04:31.631 - INFO - +--- END KW: Selenium2Library.Click Element (457)
+20161103 14:04:31.631 - INFO - +-- END KW: au_admin_page.Go to Customer Index Page on Administration Page (458)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:31.632 - INFO - +-- START KW: customer_index_page.Input Customer on Customer Index Page [ ASh_Test_Customer+${NUMBER} ]
+20161103 14:04:31.632 - INFO - +--- START KW: Selenium2Library.Input Text [ ${cip_inpt_filter} | ${text} ]
+20161103 14:04:31.633 - INFO - Typing text 'ASh_Test_Customer+2522' into text field '//input[contains(@ng-model, 'customersTableUpgrade.filter.name')]'
+20161103 14:04:32.589 - INFO - +--- END KW: Selenium2Library.Input Text (957)
+20161103 14:04:32.590 - INFO - +-- END KW: customer_index_page.Input Customer on Customer Index Page (958)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:32.590 - INFO - +-- START KW: Selenium2Library.Page Should Contain [ ASh_Test_Customer+${NUMBER} ]
+20161103 14:04:33.012 - INFO - Current page contains text 'ASh_Test_Customer+2522'.
+20161103 14:04:33.013 - INFO - +-- END KW: Selenium2Library.Page Should Contain (423)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161103 14:04:33.013 - INFO - +-- START TEARDOWN: Selenium2Library.Close All Browsers [ ]
+20161103 14:04:33.014 - DEBUG - Closing all browsers
+20161103 14:04:33.278 - INFO - +-- END TEARDOWN: Selenium2Library.Close All Browsers (265)
+------------------------------------------------------------------------------
+20161103 14:04:33.278 - INFO - +- END TEST: Verify Customer Creation (11765)
+------------------------------------------------------------------------------
+20161103 14:04:33.280 - INFO - + END SUITE: Login (28038)
+==============================================================================

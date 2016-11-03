@@ -1,0 +1,9 @@
+***Settings***
+Resource  login_page.txt
+Resource  admin_page.txt
+Resource  customer_creation_page.txt
+Resource  customer_index_page.txt
+Resource  mandate_mngt_page.txt
+Resource  new_mandate_page.txt
+Resource  user_creation_page.txt
+Resource  user_dashboard_page.txt

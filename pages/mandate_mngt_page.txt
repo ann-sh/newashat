@@ -1,0 +1,17 @@
+***Settings***
+
+Resource  ../libs.txt
+
+***Variables***
+
+${mmp_btn_new_mndt}  xpath=.//*[@id='main_app_container']/div[1]/div/div/div/div[1]/div[2]/div[1]/div/div[2]/div/ng-transclude/button
+${mmp_inpt_filter}  //input[contains(@testid, 'quick_filter_name')]
+***Keywords***
+
+Click New Mnadate Button on Mandate Management Page
+  Click Element  ${mmp_btn_new_mndt}  
+
+Input Mandate on Mandate Management Page
+  [Arguments]  ${text}
+  Input Text  ${mmp_inpt_filter}  ${text}
+

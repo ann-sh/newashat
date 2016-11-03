@@ -1,0 +1,25 @@
+***Settings***
+
+Resource  ../libs.txt
+
+***Variables***
+
+${udp_mndt_btn}  xpath=(//a[@href=""])[2]
+${udp_btn_new_mndt}  xpath=//button[@href="#/new-mandate"]
+${udp_btn_user_menu}  xpath=//span[contains(@class,'caret')]
+${udp_btn_logout}  xpath=//a[contains(@class,'ng-binding')]
+
+
+***Keywords***
+
+Click New Mandat button On User Dashboard Page
+  Click Element  ${udp_btn_new_mndt}  
+  
+Click on Mandate tab on User Dashboard Page
+  Click Element  ${udp_mndt_btn} 
+ 
+Click AM Dropdown On User Dashboard Page
+  Click Element  ${udp_btn_user_menu}
+
+Select Logout On User Dashboard Page
+  Click Element  ${udp_btn_logout}

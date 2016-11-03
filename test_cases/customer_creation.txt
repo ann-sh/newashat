@@ -1,0 +1,93 @@
+***Settings***
+Documentation  This file represents Registration on our web-site
+Resource  ../config.txt
+Test Setup  Preconditions  
+Test Teardown  Close All Browsers
+***Keywords***
+Preconditions  
+  Open Browser for AuditTool  ${HOME_URL}  ${BROWSER}
+***Test Case***
+Sucessful Customer Creation
+  ${NUMBER}=  Evaluate  random.randint(1,10000)  random
+  Set Suite Variable  ${NUMBER}
+  Input Username on Login Page  au_admin
+  Input AU Password on Login Page  ${ADMIN_PASSWORD}
+  Click Log in on Login Page
+  Wait For Kunde on Administration Page
+  Click Create New Customer on Administration Page
+  Input Name on Customer Creation Page  ASh_Test_Customer+${NUMBER}
+  Input Address on Customer Creation Page  Betburweg ${NUMBER}
+  Input City on Customer Creation Page  Loëx
+  Input Phone on Customer Creation Page  022 337 78 39
+  Input Zip on Customer Creation Page  123 ${NUMBER}
+  Input Entity on Customer Creation Page  ASh Test Customer+${NUMBER} AG
+  Input Email on Customer Creation Page  testemail+${NUMBER}@gmail.com
+  Save Customer on Customer Creation Page
+Verify Customer Creation
+  Input Username on Login Page  au_admin
+  Input AU Password on Login Page  ${ADMIN_PASSWORD}
+  Click Log in on Login Page
+  Wait For Customer Index on Administration Page
+  Go to Customer Index Page on Administration Page
+  Input Customer on Customer Index Page  ASh_Test_Customer+${NUMBER}
+  Page should contain  ASh_Test_Customer+${NUMBER}
+Sucessful AD Creation
+  Input Username On Login Page  au_admin
+  Input AU Password On Login Page  ${ADMIN_PASSWORD}
+  Click Log in On Login Page
+  Wait Until Keyword Succeeds  1m  25sec  Create New User On Admin Page 
+  Wait Until Keyword Succeeds  1m  5sec  Input Login Name On User Creation Page  Anna+${NUMBER}
+  Input Name On User Creation Page  Anna+${NUMBER}
+  Input Surname On User Creation Page  Sinko
+  Input Email On User Creation Page  scaletoolstest+${NUMBER}@gmail.com
+  Input Password On User Creation Page  scaletoolstest123${NUMBER}${NUMBER}
+  Input Confirm Password On User Creation Page  scaletoolstest123${NUMBER}${NUMBER}
+  Select Role On User Creation Page  Administrator
+  Select Firma On User Creation Page  Spectas AG
+  Wait Until Keyword Succeeds  1m  25sec  Click OK Button On User Creation Page
+Sucessful AU Creation
+  Input Username On Login Page  Anna+${NUMBER}
+  Input Password On Login Page  scaletoolstest123${NUMBER}${NUMBER}
+  Wait Until Keyword Succeeds  0m  30sec  Click Log in On Login Page
+  Wait Until Keyword Succeeds  1m  5sec   Click Dropdown On Admin Page
+  Select My Account Button On Admin Page
+  Wait Until Keyword Succeeds  1m  5sec  Create New User On Admin Page  
+  Wait Until Keyword Succeeds  1m  5sec  Input Login Name On User Creation Page  Nick+${NUMBER}
+  Input Name On User Creation Page  Nick+${NUMBER}
+  Input Surname On User Creation Page  Bush
+  Input Email On User Creation Page  annsyniakova+${NUMBER}@gmail.com
+  Input Password On User Creation Page  scaletoolstest123${NUMBER}${NUMBER}
+  Input Confirm Password On User Creation Page  scaletoolstest123${NUMBER}${NUMBER}
+  Select Role On User Creation Page  Auditor
+  Select Firma On User Creation Page  Spectas AG
+  Click OK Button On User Creation Page
+Verify AU Creation
+  Input Username On Login Page  Nick+${NUMBER}
+  Input Password On Login Page  scaletoolstest123${NUMBER}${NUMBER}
+  Click Log in On Login Page
+Sucessful New mandate creation
+  [Tags]  mandate_create  
+  Sleep  5
+  Input Username On Login Page  au_customer_admin
+  Input AD Password On Login Page  ${adADMIN_PASSWORD}
+  Wait Until Keyword Succeeds  1 min  5 sec  Click Log in On Login Page
+  Sleep  5
+  Wait Until Keyword Succeeds  1 min  5 sec  Click New Mandat button On User Dashboard Page
+  Sleep  5
+  Input Name On New Mandate Page  test${NUMBER}
+  Input Responsible Person On New Mandate Page  Valya Kobilina
+  Input Adress On New Mandate Page  Poland, Warsaw
+  Input Email On New Mandate Page  vkobilina@gmail.com
+  Select Mandate Manager On New Mandate Page  Nicola Fantini
+  Input Kunde Number On New Mandate Page  0185649044875
+  Input Lefal Entity On New Mandate Page  AVERNA UG
+  Input Phone On New Mandate Page  +49-5896-85914552
+  Input Closing Date On New Mandate Page  2018-03-03
+  Select Deputy Manager On New Mandate Page  Nicola Fantini
+  Click OK On New Mandate Page
+  Click on Mandate tab on User Dashboard Page
+  Input Mandate on Mandate Management Page  test${NUMBER}
+  Page Should Contain  test${NUMBER}
+
+
+

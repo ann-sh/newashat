@@ -1,0 +1,39 @@
+***Settings***
+Resource  ../libs.txt
+***Variables***
+${inp_login}  id=udetails_username
+${inp_email}  id=udetails_email
+${inp_pwd}  id=udetails_password
+${inp_conf_pwd}  id=udetails_confirm_password
+${inp_name}  id=udetails_firstname
+${inp_surname}  id=udetails_lastname
+${btn_ok}  xpath=//button[contains(@testid, 'btn_save')]
+***Keywords***
+Input Login Name On User Creation Page 
+  [Arguments]  ${text}
+  Input Text  ${inp_login}  ${text}
+Input Name On User Creation Page
+  [Arguments]  ${text}
+  Input Text  ${inp_name}  ${text}
+Input Surname On User Creation Page
+  [Arguments]  ${text}
+  Input Text  ${inp_surname}  ${text}
+Input Email On User Creation Page
+  [Arguments]  ${text}
+  Input Text  ${inp_email}  ${text}
+Input Password On User Creation Page
+  [Arguments]  ${text}
+  Input Text  ${inp_pwd}  ${text}
+Input Confirm Password On User Creation Page
+  [Arguments]  ${text}
+  Input Text  ${inp_conf_pwd}  ${text}
+Select Role On User Creation Page
+  [Documentation]  Selects Administrator, Helpdesk, Technisher support, Customer administrator, Auditor, Extern revisor, Mandat Vertreter
+  [Arguments]  ${title}
+  Select From List By Label  id=udetails_role  ${title}
+Select Firma On User Creation Page
+  [Arguments]  ${title}
+  Select From List By Label  xpath=//select[contains(@name, 'customer_id')]   ${title}
+Click OK Button On User Creation Page
+  Click Element  ${btn_ok} 
+
